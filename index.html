@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/color.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/ganbalitour.css" />
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
   </head>
   <body class="tg-home tg-homevone">
@@ -342,8 +343,14 @@
             <div class="row">
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <h1>Gan Bali Tour</h1>
-                <h2>You can choose your own destination 2</h2>
-                <form class="tg-formtheme tg-formtrip">
+                <h2>
+                  Going Anywhere in Bali<br />An Easy Vacation for Your
+                  Boundless Bali Pleasure
+                </h2>
+                <form
+                  class="tg-formtheme tg-formtrip"
+                  onsubmit="booknowOnsubmit(event)"
+                >
                   <fieldset>
                     <div class="form-group">
                       <div class="tg-select">
@@ -351,14 +358,62 @@
                           class="selectpicker"
                           data-live-search="true"
                           data-width="100%"
+                          name="services"
+                        >
+                          <option data-tokens="Services">Services</option>
+                          <option data-tokens="Tour Information and Services">
+                            Tour Information and Services
+                          </option>
+                          <option
+                            data-tokens="Transportation Service and Vehicle Rental"
+                          >
+                            Transportation Service and Vehicle Rental
+                          </option>
+                          <option
+                            data-tokens="Hotel, Restaurant, and Activity booking"
+                          >
+                            Hotel, Restaurant, and Activity booking
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="tg-select">
+                        <select
+                          class="selectpicker"
+                          data-live-search="true"
+                          data-width="100%"
+                          name="categories"
                         >
                           <option data-tokens="Categories">Categories</option>
-                          <option data-tokens="All Areas">All Areas</option>
-                          <option data-tokens="Bayonne">Bayonne</option>
-                          <option data-tokens="Greenville">Greenville</option>
-                          <option data-tokens="Manhattan">Manhattan</option>
-                          <option data-tokens="Queens">Queens</option>
-                          <option data-tokens="The Heights">The Heights</option>
+                          <optgroup label="Tour Information and Service">
+                            <option data-tokens="All Inclusive Tour">
+                              All Inclusive Tour
+                            </option>
+                            <option data-tokens="Driver Package Tour">
+                              Driver Package Tour
+                            </option>
+                          </optgroup>
+                          <optgroup
+                            label="Transportation Service and Vehicle Rental"
+                          >
+                            <option data-tokens="Pick Up & Drop Off Service">
+                              Pick Up & Drop Off Service
+                            </option>
+                            <option data-tokens="Airport Transfer">
+                              Airport Transfer
+                            </option>
+                            <option data-tokens="Vehicle Rental">
+                              Vehicle Rental
+                            </option>
+                          </optgroup>
+                          <optgroup
+                            label="Hotel, Restaurant, and Activity booking"
+                          >
+                            <option data-tokens="Hotel">Hotel</option>
+                            <option data-tokens="Restaurant">Restaurant</option>
+                            <option data-tokens="Activity">Activity</option>
+                          </optgroup>
                         </select>
                       </div>
                     </div>
@@ -368,32 +423,9 @@
                           class="selectpicker"
                           data-live-search="true"
                           data-width="100%"
+                          name="month"
                         >
-                          <option data-tokens="Adventure Type">
-                            Adventure Type
-                          </option>
-                          <option data-tokens="Ice Adventure Vacations">
-                            Ice Adventure Vacations
-                          </option>
-                          <option data-tokens="National Park">
-                            National Park
-                          </option>
-                          <option data-tokens="Adult Vacations">
-                            Adult Vacations
-                          </option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="tg-select">
-                        <select
-                          class="selectpicker"
-                          data-live-search="true"
-                          data-width="100%"
-                        >
-                          <option data-tokens="Travel Month">
-                            Travel Month
-                          </option>
+                          <option data-tokens="Month">Month</option>
                           <option data-tokens="January">January</option>
                           <option data-tokens="February">February</option>
                           <option data-tokens="March">March</option>
@@ -415,23 +447,31 @@
                           class="selectpicker"
                           data-live-search="true"
                           data-width="100%"
+                          id="slidercontentInputTravelDate"
+                          name="date"
                         >
-                          <option data-tokens="Duration">Duration</option>
-                          <option data-tokens="2 weeks">2 weeks</option>
-                          <option data-tokens="3 weeks">3 weeks</option>
-                          <option data-tokens="4 weeks">4 weeks</option>
-                          <option data-tokens="5 weeks">5 weeks</option>
-                          <option data-tokens="6 weeks">6 weeks</option>
-                          <option data-tokens="7 weeks">7 weeks</option>
-                          <option data-tokens="8 weeks">8 weeks</option>
-                          <option data-tokens="9 weeks">9 weeks</option>
-                          <option data-tokens="10 weeks">10 weeks</option>
+                          <option data-tokens="Date">Date</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="tg-select">
+                        <select
+                          class="selectpicker"
+                          data-live-search="true"
+                          data-width="100%"
+                          name="contactby"
+                        >
+                          <option data-tokens="Contact By">Contact By</option>
+                          <option data-tokens="Email">Email</option>
+                          <option data-tokens="Whatsapp">Whatsapp</option>
+                          <option data-tokens="Telegram">Telegram</option>
                         </select>
                       </div>
                     </div>
                     <div class="form-group">
                       <button class="tg-btn" type="submit">
-                        <span>find tours</span>
+                        <span>Book Now!</span>
                       </button>
                     </div>
                   </fieldset>
@@ -473,10 +513,7 @@
                         />
                         <div class="tg-hoverbox">
                           <div class="tg-adventuretitle">
-                            <h2>Ice Adventure Vacations</h2>
-                          </div>
-                          <div class="tg-description">
-                            <p>your best vacation ever</p>
+                            <h2>Tour Information & Services</h2>
                           </div>
                         </div>
                       </a>
@@ -491,7 +528,7 @@
                         />
                         <div class="tg-hoverbox">
                           <div class="tg-adventuretitle">
-                            <h2>National Park</h2>
+                            <h2>Transportation Service</h2>
                           </div>
                         </div>
                       </a>
@@ -506,7 +543,7 @@
                         />
                         <div class="tg-hoverbox">
                           <div class="tg-adventuretitle">
-                            <h2>Adult Vacations</h2>
+                            <h2>Vehicle Rental</h2>
                           </div>
                         </div>
                       </a>
@@ -524,13 +561,15 @@
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                   <div class="tg-feature">
                     <div class="tg-featuretitle">
-                      <h2><span>01</span>Luxury Hotels</h2>
+                      <h2><span>01</span>Tour Information and Service</h2>
                     </div>
                     <div class="tg-description">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit, sed diam nonummy nibh tempor cum soluta nobis
-                        consectetuer nihil imperdiet doming...
+                        Explore Bali's charm with our immersive Tour Information
+                        and Service, where local guides reveal hidden treasures,
+                        share historical anecdotes, and bring destinations to
+                        life, ensuring engaging, educational, and memorable
+                        experiences.
                       </p>
                     </div>
                   </div>
@@ -538,13 +577,16 @@
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                   <div class="tg-feature">
                     <div class="tg-featuretitle">
-                      <h2><span>02</span>Tourist Guide</h2>
+                      <h2>
+                        <span>02</span>Transportation Service and Vehicle Rental
+                      </h2>
                     </div>
                     <div class="tg-description">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit, sed diam nonummy nibh tempor cum soluta nobis
-                        consectetuer nihil imperdiet doming...
+                        Affordable and stylish transportation services,
+                        including Airport Transfers, Pick up/Drop off, and
+                        flexible Car or Bike Rentals, ensuring a memorable and
+                        accessible journey in Bali.
                       </p>
                     </div>
                   </div>
@@ -552,13 +594,16 @@
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                   <div class="tg-feature">
                     <div class="tg-featuretitle">
-                      <h2><span>03</span>Flights Tickets</h2>
+                      <h2>
+                        <span>03</span>Hotel, Restaurant, and Activity booking
+                      </h2>
                     </div>
                     <div class="tg-description">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit, sed diam nonummy nibh tempor cum soluta nobis
-                        consectetuer nihil imperdiet doming...
+                        Seamless booking for enhanced travel experience – from
+                        cozy accommodations to gourmet delights and exciting
+                        local activities, trust us to handle the details,
+                        ensuring a memorable and hassle-free journey.
                       </p>
                     </div>
                   </div>
@@ -579,7 +624,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                   <div class="tg-sectiontitle tg-sectiontitleleft">
                     <h2>Popular Tours</h2>
-                    <a class="tg-btnvtwo" href="javascript:void(0);"
+                    <a class="tg-btnvtwo" href="/allinclusivetour.html"
                       >All Tours</a
                     >
                   </div>
@@ -589,43 +634,35 @@
                   >
                     <div class="item tg-populartour">
                       <figure>
-                        <a href="tourbookingdetail.html"
+                        <a href="ubudcanetour.html"
                           ><img
                             src="images/tours/img-01.jpg"
                             alt="image categories"
                         /></a>
-                        <span class="tg-descount">25% Off</span>
                       </figure>
                       <div class="tg-populartourcontent">
                         <div class="tg-populartourtitle">
                           <h3>
-                            <a href="tourbookingdetail.html"
-                              >City Tours in Europe, Paris</a
-                            >
+                            <a href="ubudcanetour.html">Ubud CANE Tour</a>
                           </h3>
                         </div>
                         <div class="tg-description">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit, sed diam nonummy nibh...
+                            Immerse yourself in Culture, Adventure, Nature, and
+                            Taste in 1 day
                           </p>
                         </div>
                         <div class="tg-populartourfoot">
-                          <div class="tg-durationrating">
-                            <span class="tg-tourduration">7 Days</span>
-                            <span class="tg-stars"><span></span></span>
-                            <em>(3 Review)</em>
-                          </div>
+                          <div class="tg-durationrating"></div>
                           <div class="tg-pricearea">
-                            <del>$2,800</del>
-                            <h4>$2,500</h4>
+                            <h4>IDR 1.700k</h4>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="item tg-populartour">
                       <figure>
-                        <a href="tourbookingdetail.html"
+                        <a href="eastbalihistoricaltour.html"
                           ><img
                             src="images/tours/img-02.jpg"
                             alt="image categories"
@@ -634,33 +671,28 @@
                       <div class="tg-populartourcontent">
                         <div class="tg-populartourtitle">
                           <h3>
-                            <a href="tourbookingdetail.html"
-                              >Best of Canada Tours and Travel</a
+                            <a href="eastbalihistoricaltour.html"
+                              >East Bali Historical Tour</a
                             >
                           </h3>
                         </div>
                         <div class="tg-description">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit, sed diam nonummy nibh...
+                            Uncover the early history of Bali's kingdoms and the
+                            culture of Bali Aga society on this immersive tour
                           </p>
                         </div>
                         <div class="tg-populartourfoot">
-                          <div class="tg-durationrating">
-                            <span class="tg-tourduration">7 Days</span>
-                            <span class="tg-stars"><span></span></span>
-                            <em>(3 Review)</em>
-                          </div>
+                          <div class="tg-durationrating"></div>
                           <div class="tg-pricearea">
-                            <span>from</span>
-                            <h4>$600</h4>
+                            <h4>IDR 1.050k</h4>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="item tg-populartour">
                       <figure>
-                        <a href="tourbookingdetail.html"
+                        <a href="adayoftemplestour.html"
                           ><img
                             src="images/tours/img-03.jpg"
                             alt="image categories"
@@ -669,33 +701,28 @@
                       <div class="tg-populartourcontent">
                         <div class="tg-populartourtitle">
                           <h3>
-                            <a href="tourbookingdetail.html"
-                              >Italy – 3 Days in Rome, Golden Gate</a
+                            <a href="adayoftemplestour.html"
+                              >A Day of Temples Tour</a
                             >
                           </h3>
                         </div>
                         <div class="tg-description">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit, sed diam nonummy nibh...
+                            Explore the spiritual beauty of Bali with our "A Day
+                            of Temples Tour
                           </p>
                         </div>
                         <div class="tg-populartourfoot">
-                          <div class="tg-durationrating">
-                            <span class="tg-tourduration">7 Days</span>
-                            <span class="tg-stars"><span></span></span>
-                            <em>(3 Review)</em>
-                          </div>
+                          <div class="tg-durationrating"></div>
                           <div class="tg-pricearea">
-                            <span>from</span>
-                            <h4>$1,430</h4>
+                            <h4>IDR 1.200k</h4>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="item tg-populartour">
                       <figure>
-                        <a href="tourbookingdetail.html"
+                        <a href="createyourowntour.html"
                           ><img
                             src="images/tours/img-04.jpg"
                             alt="image categories"
@@ -704,27 +731,17 @@
                       <div class="tg-populartourcontent">
                         <div class="tg-populartourtitle">
                           <h3>
-                            <a href="tourbookingdetail.html"
-                              >Best of Canada Tours and Travel</a
+                            <a href="createyourowntour.html"
+                              >Create Your Own Tour</a
                             >
                           </h3>
                         </div>
                         <div class="tg-description">
                           <p>
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing
-                            elit, sed diam nonummy nibh...
+                            Craft a personalized Bali experience by choosing
+                            your destinations or combining them with our
+                            packages
                           </p>
-                        </div>
-                        <div class="tg-populartourfoot">
-                          <div class="tg-durationrating">
-                            <span class="tg-tourduration">7 Days</span>
-                            <span class="tg-stars"><span></span></span>
-                            <em>(3 Review)</em>
-                          </div>
-                          <div class="tg-pricearea">
-                            <span>from</span>
-                            <h4>$600</h4>
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -753,54 +770,28 @@
                 >
                   <div class="tg-ourdestinationcontent">
                     <div class="tg-sectiontitle tg-sectiontitleleft">
-                      <h2>Popular Tours</h2>
+                      <h2>Why Choose Gan Bali Tour</h2>
                     </div>
-                    <div class="tg-description">
-                      <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit, sed diam consectetuer adipiscing elit, sed diam
-                        nonummy nibh...
-                      </p>
-                    </div>
-                    <ul class="tg-categories">
+                    <ol class="tg-categories">
                       <li>
-                        <a href="tourcatagory.html">
-                          <h3>Europe</h3>
-                          <em>(05)</em>
-                        </a>
+                        We have everything you need for your Bali Travel. Please
+                        let us know anything you want.
                       </li>
                       <li>
-                        <a href="tourcatagory.html">
-                          <h3>Africa</h3>
-                          <em>(15)</em>
-                        </a>
+                        For those who looking for Small Budget or Luxury
+                        Services, we are dedicated to give the best services for
+                        you.
                       </li>
                       <li>
-                        <a href="tourcatagory.html">
-                          <h3>Asia</h3>
-                          <em>(12)</em>
-                        </a>
+                        Served by Experienced Local People, our business is
+                        community-based.
                       </li>
                       <li>
-                        <a href="tourcatagory.html">
-                          <h3>Oceania</h3>
-                          <em>(02)</em>
-                        </a>
+                        Our prices are reachable and not expensive. Why should
+                        community-based business pay tax?
                       </li>
-                      <li>
-                        <a href="tourcatagory.html">
-                          <h3>North America</h3>
-                          <em>(08)</em>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="tourcatagory.html">
-                          <h3>South America</h3>
-                          <em>(27)</em>
-                        </a>
-                      </li>
-                    </ul>
-                    <a class="tg-btn" href="tourcatagory.html"
+                    </ol>
+                    <a class="tg-btn" href="categories.html"
                       ><span>all categories</span></a
                     >
                   </div>
@@ -1229,74 +1220,6 @@
                         </p>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section
-          class="tg-parallax"
-          data-appear-top-offset="600"
-          data-parallax="scroll"
-          data-image-src="images/parallax/bgparallax-03.jpg"
-        >
-          <div class="tg-sectionspace tg-haslayout">
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <div class="tg-ourpartners">
-                    <div class="tg-pattern">
-                      <img src="images/patternw.png" alt="image destination" />
-                    </div>
-                    <h2>Our Partners</h2>
-                    <ul class="tg-partners">
-                      <li>
-                        <figure>
-                          <a href="javascript:void(0);"
-                            ><img
-                              src="images/partners/img-01.png"
-                              alt="image categories"
-                          /></a>
-                        </figure>
-                      </li>
-                      <li>
-                        <figure>
-                          <a href="javascript:void(0);"
-                            ><img
-                              src="images/partners/img-02.png"
-                              alt="image categories"
-                          /></a>
-                        </figure>
-                      </li>
-                      <li>
-                        <figure>
-                          <a href="javascript:void(0);"
-                            ><img
-                              src="images/partners/img-03.png"
-                              alt="image categories"
-                          /></a>
-                        </figure>
-                      </li>
-                      <li>
-                        <figure>
-                          <a href="javascript:void(0);"
-                            ><img
-                              src="images/partners/img-04.png"
-                              alt="image categories"
-                          /></a>
-                        </figure>
-                      </li>
-                      <li>
-                        <figure>
-                          <a href="javascript:void(0);"
-                            ><img
-                              src="images/partners/img-05.png"
-                              alt="image categories"
-                          /></a>
-                        </figure>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
