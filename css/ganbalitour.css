@@ -2,3 +2,11 @@
 .tg-sectiontitle h2 {
   line-height: normal;
 }
+
+footer .tg-widgetnewsletter .tg-widgetcontent span {
+  color: white;
+}
+
+footer .tg-btn:hover span {
+  color: #22a6b3;
+}

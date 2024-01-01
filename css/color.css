@@ -41,7 +41,9 @@ a:active,
 .tg-prevpost a:hover h2,
 .tg-nextpost a:hover h2,
 .tg-socialicons li a:hover i,
-.location_indicator:before{ color: #ff7550; }
+.location_indicator:before {
+  color: #22a6b3;
+}
 /*=============================================
 			Theme Background Color
 =============================================*/
@@ -54,9 +56,9 @@ a:active,
 .tg-btntoggleform,
 .tg-pagination ul li.tg-active a,
 .tg-pagination ul li a:hover,
-.tg-select .dropdown-menu>.active>a,
-.tg-select .dropdown-menu>.active>a:focus,
-.tg-select .dropdown-menu>.active>a:hover,
+.tg-select .dropdown-menu > .active > a,
+.tg-select .dropdown-menu > .active > a:focus,
+.tg-select .dropdown-menu > .active > a:hover,
 .tg-select .dropdown-menu.inner li a:hover,
 .tg-bookingtabs .tg-themetabnav li:hover a:before,
 .tg-bookingtabs .tg-themetabnav li.active a:before,
@@ -68,15 +70,21 @@ a:active,
 .tg-btnarea .tg-btn,
 .tg-pkgplanfoot .tg-btn:hover,
 .tg-btnaddtocart:hover,
-.tg-formleavecomment .tg-btn{ background:#ff7550; }
-.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{ background:#ff7550 !important;}
+.tg-formleavecomment .tg-btn {
+  background: #22a6b3;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+  background: #22a6b3 !important;
+}
 /*=============================================
 			Theme Border Color
 =============================================*/
 input:focus,
 .select select:focus,
 .form-control:focus,
-.tg-reply:hover{ border-color: #ff7550; }
+.tg-reply:hover {
+  border-color: #22a6b3;
+}
 /*==========================================================================================
 								Theme Secondary Colors										
 ==========================================================================================*/
@@ -95,7 +103,9 @@ input:focus,
 .tg-btnviewall,
 .tg-search .tg-destinations li a em,
 .tg-addnav ul li:hover a,
-.tg-breadcrumb li:hover a{ color: #fee133; }
+.tg-breadcrumb li:hover a {
+  color: #81ecec;
+}
 /*=============================================
 			Theme Background Color
 =============================================*/
@@ -109,10 +119,14 @@ input:focus,
 .tg-availhead,
 .navbar-header,
 .tg-btnroundprev:hover,
-.tg-btnroundnext:hover{ background:#fee133; }
+.tg-btnroundnext:hover {
+  background: #81ecec;
+}
 /*=============================================
 			Theme Border Color
 =============================================*/
 blockquote,
 .tg-btnroundprev:hover,
-.tg-btnroundnext:hover{ border-color: #fee133; }
+.tg-btnroundnext:hover {
+  border-color: #81ecec;
+}

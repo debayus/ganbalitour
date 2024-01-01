@@ -20,7 +20,7 @@ const booknowOnsubmit = (e) => {
   ) {
     return;
   }
-  const message = `Hello, Gan Bali Tour!\rCould you give me information about ${e.target["categories"].value} on ${e.target["month"].value} ${e.target["date"].value}\rThank You!`;
+  const message = `Hello, Gan Bali Tour!\r\nCould you give me information about ${e.target["categories"].value} on ${e.target["month"].value} ${e.target["date"].value}\r\nThank You!`;
   if (contactBy === "Email") {
     window.open(
       `mailto:info@ganbalitour.com?subject=${encodeURIComponent(
