@@ -1451,18 +1451,18 @@ li.tg-rss a {
 }
 .tg-formtrip .form-group {
   margin: 0;
-  width: 20%;
+  width: 30%;
   float: left;
   padding: 0 5px;
 }
 .tg-formtrip .form-group:nth-child(3),
-.tg-formtrip .form-group:nth-child(5) {
+.tg-formtrip .form-group:nth-child(4) {
   width: 20%;
 }
 .tg-formtrip .form-group:first-child {
   padding-left: 0;
 }
-.tg-formtrip .form-group:nth-child(5) {
+.tg-formtrip .form-group:nth-child(4) {
   padding-right: 0;
 }
 .tg-formtrip .form-group .tg-select select {
