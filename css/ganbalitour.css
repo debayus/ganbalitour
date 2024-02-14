@@ -10,3 +10,7 @@ footer .tg-widgetnewsletter .tg-widgetcontent span {
 footer .tg-btn:hover span {
   color: #22a6b3;
 }
+
+.tg-populartourvtwo .tg-populartourcontent .tg-description p {
+  -webkit-line-clamp: unset;
+}
