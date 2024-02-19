@@ -14,3 +14,9 @@ footer .tg-btn:hover span {
 .tg-populartourvtwo .tg-populartourcontent .tg-description p {
   -webkit-line-clamp: unset;
 }
+
+@media (min-width: 992px) {
+  .page-categories .tg-description {
+    min-height: 135px;
+  }
+}
