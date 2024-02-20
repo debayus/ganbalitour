@@ -1,0 +1,51 @@
+{
+  "createyourowntour": {
+    "nama": "Create Your Own Tour",
+    "decription": "You can choose your own destination, or mix with the provided package with your tourist bucket list. Contact Gan Bali Tour for personalized and authentic experiences. Email us at info@ganbalitour.com or call/WhatsApp +6238-9256-8969"
+  },
+  "ubudcanetour": {
+    "nama": "Ubud CANE Tour (Culture-Adventure-Nature-Taste)",
+    "decription": "Immerse yourself in Culture, Adventure, Nature, and Taste of Ubud in 1 day.",
+    "price": 23
+  },
+  "kintamanitour": {
+    "nama": "Kintamani Tour",
+    "decription": "A perfect journey if you wanted to see the beauty of the cleanest village in the world by going through Batur Mountains and Lake.",
+    "price": 29
+  },
+  "historyofthebeginningtour": {
+    "nama": "History of the Beginning Tour",
+    "decription": "This journey will bring you through the story of Karangasem King and Bali Aga as the oldest Balinese Community’s Lifestyle.",
+    "price": 29
+  },
+  "southbalitour": {
+    "nama": "South Bali Tour",
+    "decription": "If you are looking for the best sunset pleasure, let’s explore the south part of Bali with Gan Bali Tour.",
+    "price": 19
+  },
+  "westgatetour": {
+    "nama": "West Gate Tour",
+    "decription": "A Journey to West Part of Bali to capture your moment in Handara Iconic Gate with its stunning architecture and picturesque surroundings.",
+    "price": 27
+  },
+  "ubudtour": {
+    "nama": "Ubud Tour",
+    "decription": "Spend your day in Ubud, the famous Place for its art and nature",
+    "price": 27
+  },
+  "adayoftemplestour": {
+    "nama": "A day of Temples Tour",
+    "decription": "A journey designed for you to feel the true Bali, which is well known as “the island of thousand temples”.",
+    "price": 34
+  },
+  "eastbalitour": {
+    "nama": "East Bali Tour",
+    "decription": "As the beginning of the east part exploration, this tour is started to the east gate of Bali, where the sun rises.",
+    "price": 29
+  },
+  "bedugultour": {
+    "nama": "Bedugul Tour",
+    "decription": "Feel the fresh atmosphere in Bali by joining this tour. You will be amazed by the landscape of Botanical Garden.",
+    "price": 29
+  }
+}
