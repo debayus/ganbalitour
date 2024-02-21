@@ -73,7 +73,7 @@ if (window.location.pathname === "/driverpackagetouritem.html") {
 }
 
 if (window.location.pathname === "/allinclusivetouritem.html") {
-  tourDetailPage("/data/tour1.json");
+  tourDetailPage("/data/tour1.json", true);
 }
 
 if (window.location.pathname === "/driverpackagetour.html") {
