@@ -50,7 +50,7 @@ const tourPage = (urlData, driverpackagetour) => {
   });
 };
 
-const tourDetailPage = (urlData, getFromHtml) => {
+const tourDetailPage = (urlData, getFromHtml, htmlPath) => {
   const urlParams = new URLSearchParams(window.location.search);
   const id = urlParams.get("id");
   $.getJSON(urlData, (data) => {
@@ -58,7 +58,7 @@ const tourDetailPage = (urlData, getFromHtml) => {
     $(".tour-decription").html(data[id].decription);
   });
   if (getFromHtml) {
-    $.get(`/data/tour/${id}.html`, (data) => {
+    $.get(htmlPath, (data) => {
       $(".tour-description").html(data);
     });
   }
@@ -69,11 +69,13 @@ const tourDetailPage = (urlData, getFromHtml) => {
 };
 
 if (window.location.pathname === "/driverpackagetouritem.html") {
-  tourDetailPage("/data/tour2.json", true);
+  const urlParams = new URLSearchParams(window.location.search);
+  tourDetailPage("/data/tour2.json", true, `/data/tour2/${urlParams.get("id")}.html`);
 }
 
 if (window.location.pathname === "/allinclusivetouritem.html") {
-  tourDetailPage("/data/tour1.json", true);
+  const urlParams = new URLSearchParams(window.location.search);
+  tourDetailPage("/data/tour1.json", true, `/data/tour/${urlParams.get("id")}.html`);
 }
 
 if (window.location.pathname === "/driverpackagetour.html") {
