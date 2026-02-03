@@ -21,7 +21,7 @@ const tourPage = (urlData, driverpackagetour) => {
                   price
                     ? `<div class="tg-pricearea">
                 <span>from</span>
-                <h4>$ ${data[key].price}</h4>
+                <h4>Rp ${data[key].price}</h4>
               </div>`
                     : ""
                 }
@@ -64,18 +64,26 @@ const tourDetailPage = (urlData, getFromHtml, htmlPath) => {
   }
   $(".tour-paralax").attr(
     "data-image-src",
-    `images/parallax/bgparallax-${id}.jpg`
+    `images/parallax/bgparallax-${id}.jpg`,
   );
 };
 
 if (window.location.pathname === "/driverpackagetouritem.html") {
   const urlParams = new URLSearchParams(window.location.search);
-  tourDetailPage("/data/tour2.json", true, `/data/tour2/${urlParams.get("id")}.html`);
+  tourDetailPage(
+    "/data/tour2.json",
+    true,
+    `/data/tour2/${urlParams.get("id")}.html`,
+  );
 }
 
 if (window.location.pathname === "/allinclusivetouritem.html") {
   const urlParams = new URLSearchParams(window.location.search);
-  tourDetailPage("/data/tour1.json", true, `/data/tour/${urlParams.get("id")}.html`);
+  tourDetailPage(
+    "/data/tour1.json",
+    true,
+    `/data/tour/${urlParams.get("id")}.html`,
+  );
 }
 
 if (window.location.pathname === "/driverpackagetour.html") {
